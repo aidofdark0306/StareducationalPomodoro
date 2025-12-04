@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Focus Hub — Pomodoro</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <img id="logo" src="logo.png" alt="Star Educational Complex Logo">
+      <div>
+        <h1>Student Focus Hub</h1>
+        <p class="subtitle">Pomodoro & Task Tracker</p>
+      </div>
+    </div>
+    <div class="total-time" id="totalTimeDisplay">Total study: 0m</div>
+  </header>
+
+  <main class="container">
+    <section class="left">
+      <div class="timer-card">
+        <div class="modes">
+          <button data-mode="work" class="mode active">Work</button>
+          <button data-mode="short" class="mode">Short Break</button>
+          <button data-mode="long" class="mode">Long Break</button>
+        </div>
+
+        <div class="clock" id="clock">25:00</div>
+
+        <div class="controls">
+          <button id="startBtn" class="btn green">Start</button>
+          <button id="pauseBtn" class="btn" disabled>Pause</button>
+          <button id="resetBtn" class="btn">Reset</button>
+        </div>
+
+        <div class="settings">
+          <label>Work <input id="workMin" type="number" min="1" value="25"> min</label>
+          <label>Short <input id="shortMin" type="number" min="1" value="5"> min</label>
+          <label>Long <input id="longMin" type="number" min="1" value="15"> min</label>
+        </div>
+
+        <div class="session-info">
+          <span id="sessionCount">Sessions: 0</span>
+          <span id="activeTaskLabel">Active task: <em id="activeTaskName">None</em></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="right">
+      <div class="tasks-card">
+        <div class="tasks-header">
+          <h2>Tasks</h2>
+          <div class="new-task">
+            <input id="taskInput" placeholder="Add a task (press Enter)" />
+            <button id="addTaskBtn" class="btn">Add</button>
+          </div>
+        </div>
+
+        <ul id="taskList" class="task-list"></ul>
+      </div>
+
+      <div class="history-card">
+        <h3>Study History</h3>
+        <div id="historyList" class="history-list"></div>
+        <button id="clearHistoryBtn" class="btn">Clear History</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Made for Star Educational Complex — Student Focus Hub</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
