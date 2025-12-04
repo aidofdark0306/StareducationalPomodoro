@@ -54,9 +54,9 @@ The app helps students plan tasks, stay focused during study sessions, and track
   - Visible progress history
   - Growing total study time  
 - Adaptable to personal study rhythms and schedules
+  
 
 ---
-
 ## 📂 Project Structure
 
 
